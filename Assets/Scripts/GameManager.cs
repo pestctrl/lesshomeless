@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public DayManager daym;
     public float multiplier = 1;
-    int money;
+    float money;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
             daym.BeginDay();
             this.gameObject.SetActive(false);
         }
+    }
+
+    public void AddMoney(float f) {
+        money += f;
     }
 
     public void WrapUpDay() {

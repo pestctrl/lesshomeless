@@ -15,6 +15,10 @@ public class CanShakingGame : MonoBehaviour
         
     }
 
+    void OnEnable() {
+        MoneyGenerated = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {

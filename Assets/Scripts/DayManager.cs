@@ -9,6 +9,8 @@ public class DayManager : MonoBehaviour
     public GameObject environment;
 
     public GameManager gmparent;
+
+    public CanShakingGame can;
     
     public float secondsInFullDay = 20f;
     [Range(0,1)]
@@ -32,13 +34,14 @@ public class DayManager : MonoBehaviour
         time = 0.15f;
         environment.SetActive(true);
         this.gameObject.SetActive(false);
+        GameSelected("Hello, world");
     }
 
     public void GameSelected(string tag)
     {
-
         Debug.Log("The Game has been selected");
         this.gameObject.SetActive(true);
+        can.enabled = true;
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class DayManager : MonoBehaviour
             UpdateSun();
             
             if(time > 1) {
+                gmparent.AddMoney(can.MoneyGenerated);
                 environment.SetActive(false);
                 gmparent.WrapUpDay();
                 active = false;

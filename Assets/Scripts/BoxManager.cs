@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoxManager : MonoBehaviour
 {
+    public GameObject boxenv;
+
     // Start is called before the first frame update
     void Start()
     {

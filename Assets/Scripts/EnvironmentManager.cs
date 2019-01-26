@@ -11,7 +11,7 @@ public class EnvironmentManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(BackAndFourthCycle(GameObject.FindGameObjectsWithTag("CarSpawn")[0], Car, 120, 10, Random.Range(4, 7)));
-        //StartCoroutine(BackAndFourthCycle(GameObject.FindGameObjectsWithTag("CarSpawn")[1], Car, 50, 10, Random.Range(4, 7)));
+
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class EnvironmentManager : MonoBehaviour
                 GameObject instance = Instantiate(obj, spawn.transform.position, spawn.transform.rotation);
                 spawned = true;
                 //randomize color of instance
+                //randomize type of car
                 instance.GetComponent<Rigidbody>().AddForce(obj.transform.forward * thrust, ForceMode.Force);
                 StartCoroutine(DestroyObjDelay(instance, timeDestroy));
                 yield return new WaitForSeconds(timeSpawnDelay);

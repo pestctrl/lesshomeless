@@ -10,6 +10,7 @@ TagManager:
   - Window
   - CarSpawn
   - Car
+  - KennalSpawn
   layers:
   - Default
   - TransparentFX

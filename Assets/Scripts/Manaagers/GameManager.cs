@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public DayManager daym;
     public InventoryManager inven;
+    public GameObject[] SpawnPoints = new GameObject[4];
     public GameObject BoxEnvironment;
     public float multiplier = 1;
     public float money;
@@ -42,6 +43,15 @@ public class GameManager : MonoBehaviour
         this.gameObject.SetActive(true);
         BoxEnvironment.SetActive(false);
         daym.BeginDay(inven);
+
+    }
+
+    void ResetDaySpawns()
+    {
+        for (int i = 0; i < SpawnPoints.Length; i++)
+        {
+
+        }
     }
 
     public void GoToBox() {

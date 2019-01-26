@@ -5,13 +5,14 @@ using UnityEngine;
 public class TeleportToBox : MonoBehaviour
 {
     public GameManager GM;
+    public DayManager DM;
 
     void OnTriggerEnter(Collider other)
     {
         print("boxes are fun");
         if (other.tag == "Box")
         {
-            GM.GoToBox();
+            DM.EndDay();
         }
         if (other.tag == "Bed")
         {

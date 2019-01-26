@@ -1342,6 +1342,35 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.10610545
   m_Center: {x: 0.003294535, y: 0.024205185, z: -0.0016051978}
+--- !u!114 &629861795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629861793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba1d939ea9b6904d9b292201e694340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 1881541081}
+--- !u!54 &629861798
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629861793}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &656514748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1518,7 @@ GameObject:
   - component: {fileID: 684303556}
   - component: {fileID: 684303555}
   - component: {fileID: 684303554}
+  - component: {fileID: 684303557}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Bed
@@ -1568,6 +1598,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684303552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &684303557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684303552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &697626721
 GameObject:
   m_ObjectHideFlags: 0

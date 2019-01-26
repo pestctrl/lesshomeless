@@ -72,12 +72,11 @@ public class DayManager : MonoBehaviour
                 
                 // Finish Day
                 active = false;
-                EndDay();
             }
         }
     }
 
-    void EndDay() {
+    public void EndDay() {
         environment.SetActive(false);
         gmparent.GoToBox();
         foreach (GameObject Car in GameObject.FindGameObjectsWithTag("Car"))

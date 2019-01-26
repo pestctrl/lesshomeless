@@ -40,7 +40,8 @@ public class DayManager : MonoBehaviour
 
         gameSelected = false;
 
-        //if(inven.haveSqueegee) Debug.Log("Have the squeegee");
+        // Only show these items if purchased
+        squeegee.gameObject.SetActive(inven.haveSqueegee);
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
@@ -56,7 +57,7 @@ public class DayManager : MonoBehaviour
 
         // Enable the correct game
         switch(tag) {
-            case "Can": activeGame = can; break;
+            case "Cup": print("Got the can");activeGame = can; break;
             case "Squeege": activeGame = squeegee; break;
         }
 
@@ -73,6 +74,7 @@ public class DayManager : MonoBehaviour
             if(time > 1) {
                 Debug.Log("Day is done");
 
+                Debug.Log("Earned $" + activeGame.GetMoney());
                 // Grab money generated
                 gmparent.AddMoney(activeGame.GetMoney());
 

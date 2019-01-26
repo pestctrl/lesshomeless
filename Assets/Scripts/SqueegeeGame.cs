@@ -24,7 +24,6 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
         Destroy(OldCar);
         OldCar = newCar;
         dirtyValue = 100;
-
     }
 
     private void OnTriggerStay(Collider other)

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         money = 0;
+        daym.gmparent = this;
     }
 
     void Update()

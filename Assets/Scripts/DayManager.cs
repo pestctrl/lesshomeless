@@ -52,6 +52,7 @@ public class DayManager : MonoBehaviour
             UpdateSun();
             
             if(time > 1) {
+                Debug.Log("Day is done");
                 gmparent.AddMoney(can.MoneyGenerated);
                 environment.SetActive(false);
                 gmparent.WrapUpDay();

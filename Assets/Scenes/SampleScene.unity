@@ -838,13 +838,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 798535909}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc036aef8f6f6924aa9979ff9f9f16d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 1881541081}
-  Can: {fileID: 0}
   coinMultiplier: 0
   coinGameStart: 1
   MoneyGenerated: 0
@@ -1083,6 +1082,7 @@ MonoBehaviour:
   sun: {fileID: 170076734}
   environment: {fileID: 832418803}
   gmparent: {fileID: 1881541081}
+  can: {fileID: 798535912}
   secondsInFullDay: 20
   currentTimeOfDay: 0
   timeMultiplier: 1

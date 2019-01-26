@@ -38,7 +38,7 @@ public class CanShakingGame : MonoBehaviour
 
         mult = Mathf.Abs(Pos - lastPos) * 50;
         MoneyGenerated = MoneyGenerated + (mult * 1 * Time.deltaTime);
-        print(MoneyGenerated);
+        //print(MoneyGenerated);
 
     }
 }

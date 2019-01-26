@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public DayManager daym;
     public InventoryManager inven;
     public float multiplier = 1;
-    float money;
+    public float money;
     float timewait;
     
     void Start()

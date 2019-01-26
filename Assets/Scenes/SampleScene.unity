@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 237915976}
   m_Layer: 0
   m_Name: DogFood_ShopItem
-  m_TagString: Squeege
+  m_TagString: ShopItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 338841031}
   m_Layer: 0
   m_Name: Food_ShopItem
-  m_TagString: Squeege
+  m_TagString: ShopItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 454983181}
   m_Layer: 0
   m_Name: SwordFish_ShopItem
-  m_TagString: Squeege
+  m_TagString: ShopItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2286,7 +2286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30e4d7d4324cee47b2c9e837868af0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SM: {fileID: 0}
+  SM: {fileID: 1575068948}
 --- !u!1 &1261718367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,7 +2424,7 @@ GameObject:
   - component: {fileID: 1332632472}
   m_Layer: 0
   m_Name: Water_ShopItem
-  m_TagString: Squeege
+  m_TagString: ShopItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2533,7 +2533,7 @@ GameObject:
   - component: {fileID: 1385827788}
   m_Layer: 0
   m_Name: Squeegee_ShopItem
-  m_TagString: Squeege
+  m_TagString: ShopItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2819,7 +2819,7 @@ GameObject:
   - component: {fileID: 1575068949}
   - component: {fileID: 1575068948}
   m_Layer: 0
-  m_Name: Dumpster/Shop
+  m_Name: Dumpster/ShopManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2856,6 +2856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d122cc7e0f798764a91324fed8a15720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!65 &1575068949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3109,7 +3110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30e4d7d4324cee47b2c9e837868af0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SM: {fileID: 0}
+  SM: {fileID: 1575068948}
 --- !u!1 &1821737825
 GameObject:
   m_ObjectHideFlags: 0

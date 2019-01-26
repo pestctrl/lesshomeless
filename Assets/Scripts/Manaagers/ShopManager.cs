@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    
+    public GameManager GM;
+    public InventoryManager IM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +19,20 @@ public class ShopManager : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    public void Shop(string itemName)
     {
-        if(other.tag == "ShopItem")
+        float itemPrice = 0;
+        switch (itemName)
         {
-
+            case "Squeegee_ShopItem":
+                itemPrice = 0;
+                if(GM.money > itemPrice)
+                {
+                    IM.haveSqueegee = true;
+                }
+                break;
+            default:
+                break;
         }
     }
-
 }

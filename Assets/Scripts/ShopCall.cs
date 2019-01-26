@@ -10,7 +10,7 @@ public class ShopCall : MonoBehaviour
     {
         if (other.tag == "ShopItem")
         {
-
+            SM.Shop(other.name);
         }
     }
 }

@@ -31,6 +31,13 @@ public class DayManager : MonoBehaviour
         active = true;
         time = 0.15f;
         environment.SetActive(true);
+        this.gameObject.SetActive(false);
+    }
+
+    public void GameSelected()
+    {
+        Debug.Log("The Game has been selected");
+        this.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

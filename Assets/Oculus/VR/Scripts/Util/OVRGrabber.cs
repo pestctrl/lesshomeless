@@ -250,7 +250,7 @@ public class OVRGrabber : MonoBehaviour
             m_grabbedObj = closestGrabbable;
             tag = m_grabbedObj.transform.tag;
             
-            print(tag);
+            //print(tag);
 
             m_grabbedObj.GrabBegin(this, closestGrabbableCollider);
 

@@ -26,7 +26,7 @@ public class ShopManager : MonoBehaviour
         {
             case "Squeegee_ShopItem":
                 itemPrice = 0;
-                if(GM.money > itemPrice)
+                if(GM.money >= itemPrice)
                 {
                     print("added Squeegee");
                     IM.haveSqueegee = true;

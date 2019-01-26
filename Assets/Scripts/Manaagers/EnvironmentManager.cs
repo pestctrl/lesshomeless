@@ -39,7 +39,6 @@ public class EnvironmentManager : MonoBehaviour
     {
         yield return new WaitForSeconds(timeDestroy);
         Destroy(obj);
-        Debug.Log("destroy");
 
     }
 

@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &169291718
 Transform:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &832418804
 Transform:
   m_ObjectHideFlags: 0
@@ -2859,8 +2859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d122cc7e0f798764a91324fed8a15720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 0}
-  IM: {fileID: 0}
+  GM: {fileID: 1881541081}
+  IM: {fileID: 1290448280}
 --- !u!65 &1575068949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3195,7 +3195,7 @@ MonoBehaviour:
   daym: {fileID: 1131164022}
   inven: {fileID: 1290448280}
   multiplier: 1
-  money: 0
+  money: 50
 --- !u!4 &1881541082
 Transform:
   m_ObjectHideFlags: 0

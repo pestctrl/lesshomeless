@@ -47,7 +47,9 @@ public class DayManager : MonoBehaviour
 
         // Enable the correct game
         switch(tag) {
-            case "Cup": print("Got the can");activeGame = can; break;
+            case "Cup": /*print("Got the can")*/;
+                activeGame = can;
+                break;
             case "Squeege": activeGame = squeegee; break;
         }
 

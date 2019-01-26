@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     {
         money = 0;
         daym.gmparent = this;
-        boxenv.SetActive(false);
     }
 
     void Update()
@@ -39,6 +38,5 @@ public class GameManager : MonoBehaviour
     public void GoToBox() {
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + money + "!!!");
-        
     }
 }

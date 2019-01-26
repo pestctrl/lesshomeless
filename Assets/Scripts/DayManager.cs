@@ -90,7 +90,7 @@ public class DayManager : MonoBehaviour
 
     void EndDay() {
         environment.SetActive(false);
-        gmparent.GoToSleep();
+        gmparent.GoToBox();
     }
 
     void UpdateSun() {

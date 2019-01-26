@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         money += f;
     }
 
-    public void GoToSleep() {
+    public void GoToBox() {
         // Display money earned
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + money + "!!!");

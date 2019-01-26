@@ -8,18 +8,18 @@ public class GameManager : MonoBehaviour
     public float multiplier = 1;
     float money;
     
-    // Start is called before the first frame update
     void Start()
     {
         money = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(!daym.active)
         {
             Debug.Log("Hello, new day!");
+            
+            // Run pre-run stuff and disable script
             daym.BeginDay();
             this.gameObject.SetActive(false);
         }
@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void GoToSleep() {
+        // Display money earned
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + money + "!!!");
+        // Reactivate script and wait for the next day to start
         this.gameObject.SetActive(true);
     }
 }

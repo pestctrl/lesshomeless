@@ -21,7 +21,6 @@ public class DayManager : MonoBehaviour
     public float time;
     public bool active;
     
-    // Start is called before the first frame update
     void Start()
     {
         active = false;
@@ -30,29 +29,40 @@ public class DayManager : MonoBehaviour
 
     public void BeginDay()
     {
+        // Reset timer, and show the environment
         time = 0.15f;
         environment.SetActive(true);
+
+        // Wait for a game to be selected
         this.gameObject.SetActive(false);
     }
 
     public void GameSelected(string tag)
     {
         Debug.Log("The Game has been selected " + tag);
-        active = true;
+
+        // Update the day counter and sun cycle
         this.gameObject.SetActive(true);
+        active = true;
+
+        // Enable the can game
         can.enabled = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(active) {
+            // Move time forward 
             time += (Time.deltaTime / secondsInFullDay) * timeMultiplier;
             UpdateSun();
             
             if(time > 1) {
                 Debug.Log("Day is done");
+
+                // Grab money generated
                 gmparent.AddMoney(can.MoneyGenerated);
+
+                // Finish Day
                 active = false;
                 EndDay();
             }

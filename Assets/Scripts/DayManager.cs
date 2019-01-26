@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
+    // Interacts with
     public GameObject environment;
-
     public GameManager gmparent;
-
-    public CanShakingGame can;
-    public SqueegeeGame squeegee;
-
     public SunTimer sun;
 
+    // Triggers
+    public CanShakingGame can;
+    public SqueegeeGame squeegee;
     public HomelessGame activeGame;
-    
-    public bool gameSelected;
+
+    // State
     public bool active;
     
     void Start()
@@ -30,20 +29,18 @@ public class DayManager : MonoBehaviour
 
         // Let the gamemanager know that the day is on it's way
         active = true;
+        activeGame = null;
 
         // Only show these items if purchased
         squeegee.gameObject.SetActive(inven.haveSqueegee);
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
-        gameSelected = false;
     }
 
     public void GameSelected(string tag)
     {
-        gameSelected = true;
         Debug.Log("The Game has been selected " + tag);
-        sun.StartDayTimer();
 
         // Update the day counter and sun cycle
         this.gameObject.SetActive(true);
@@ -55,6 +52,7 @@ public class DayManager : MonoBehaviour
         }
 
         activeGame.StartGame();
+        sun.StartDayTimer();
     }
 
     void Update()

@@ -34,12 +34,11 @@ public class DayManager : MonoBehaviour
         time = 0.15f;
         environment.SetActive(true);
         this.gameObject.SetActive(false);
-        GameSelected("Hello, world");
     }
 
     public void GameSelected(string tag)
     {
-        Debug.Log("The Game has been selected");
+        Debug.Log("The Game has been selected " + tag);
         this.gameObject.SetActive(true);
         can.enabled = true;
     }

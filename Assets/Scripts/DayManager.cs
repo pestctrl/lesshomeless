@@ -77,5 +77,9 @@ public class DayManager : MonoBehaviour
     void EndDay() {
         environment.SetActive(false);
         gmparent.GoToBox();
+        foreach (GameObject Car in GameObject.FindGameObjectsWithTag("Car"))
+        {
+            Destroy(Car);
+        }
     }
 }

@@ -8,7 +8,7 @@ public class EnvironmentManager : MonoBehaviour
     public GameObject Car;
     public GameObject Person;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(BackAndFourthCycle(GameObject.FindGameObjectsWithTag("CarSpawn")[0], Car, 120, 10, Random.Range(4, 7)));
 

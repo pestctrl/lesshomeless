@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface HomelessGame
 {
-    float getMoney();
+    float GetMoney();
+    void StartGame();
 }

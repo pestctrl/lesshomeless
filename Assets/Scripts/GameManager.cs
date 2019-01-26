@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     {
         if(!daym.active)
         {
-            //Debug.Log("Hello, new day!");
+            Debug.Log("Hello, new day!");
             
             // Run pre-run stuff and disable script
             daym.BeginDay(inven);

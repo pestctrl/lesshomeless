@@ -12,7 +12,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
     public GameObject SpawnPos;
     GameObject OldCar = null;
     
-    void OnEnable()
+    public void StartGame()
     {
         MoneyGenerated = 0;
         NewCar();
@@ -29,20 +29,22 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Window" && dirtyValue >= 0)
-        {
-            StartCoroutine(Depreciate());
-            Debug.Log(dirtyValue);
-        }
-        if(dirtyValue <= 0)
-        {
-            Debug.Log("New Car bitches");
-            MoneyGenerated = MoneyGenerated + 10;
-            NewCar();
+        if(other.tag == "Window") {
+            if (dirtyValue >= 0)
+            {
+                StartCoroutine(Depreciate());
+                Debug.Log(dirtyValue);
+            }
+            if(dirtyValue <= 0)
+            {
+                Debug.Log("New Car bitches");
+                MoneyGenerated = MoneyGenerated + 10;
+                NewCar();
+            }
         }
     }
 
-    public float getMoney()
+    public float GetMoney()
     {
         return MoneyGenerated;
     }

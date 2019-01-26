@@ -11,6 +11,7 @@ public class DayManager : MonoBehaviour
     public GameManager gmparent;
 
     public CanShakingGame can;
+    public SqueegeeGame squeegee;
 
     public HomelessGame activeGame;
     
@@ -19,6 +20,7 @@ public class DayManager : MonoBehaviour
     public float timeMultiplier = 1f;
     float sunInitialIntensity;
     public float time;
+    public bool gameSelected;
     public bool active;
     
     void Start()
@@ -33,7 +35,12 @@ public class DayManager : MonoBehaviour
         time = 0.15f;
         environment.SetActive(true);
 
-        if(inven.haveSqueegee) Debug.Log("Have the squeegee");
+        // Let the gamemanager know that the day is on it's way
+        active = true;
+
+        gameSelected = false;
+
+        //if(inven.haveSqueegee) Debug.Log("Have the squeegee");
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
@@ -41,15 +48,19 @@ public class DayManager : MonoBehaviour
 
     public void GameSelected(string tag)
     {
+        gameSelected = true;
         Debug.Log("The Game has been selected " + tag);
 
         // Update the day counter and sun cycle
         this.gameObject.SetActive(true);
-        active = true;
 
-        // Enable the can game
-        can.enabled = true;
-        activeGame = can;
+        // Enable the correct game
+        switch(tag) {
+            case "Can": activeGame = can; break;
+            case "Squeege": activeGame = squeegee; break;
+        }
+
+        activeGame.StartGame();
     }
 
     void Update()
@@ -63,7 +74,7 @@ public class DayManager : MonoBehaviour
                 Debug.Log("Day is done");
 
                 // Grab money generated
-                gmparent.AddMoney(activeGame.getMoney());
+                gmparent.AddMoney(activeGame.GetMoney());
 
                 // Disable all games
                 can.enabled = false;

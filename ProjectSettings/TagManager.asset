@@ -11,6 +11,7 @@ TagManager:
   - CarSpawn
   - Car
   - KennalSpawn
+  - ShopItem
   layers:
   - Default
   - TransparentFX

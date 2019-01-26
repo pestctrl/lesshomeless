@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool haveSqueegee;
+    public bool haveStick;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

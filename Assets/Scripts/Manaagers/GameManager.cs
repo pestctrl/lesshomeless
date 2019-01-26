@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
             
             // Run pre-run stuff and disable script
             daym.BeginDay(inven);
+            this.gameObject.SetActive(false);
         }
         if(timewait > 0) {
             timewait -= 0.01f;

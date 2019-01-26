@@ -8,6 +8,8 @@ TagManager:
   - Squeege
   - Street
   - Window
+  - CarSpawn
+  - Car
   layers:
   - Default
   - TransparentFX

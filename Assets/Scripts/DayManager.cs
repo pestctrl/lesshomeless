@@ -78,6 +78,10 @@ public class DayManager : MonoBehaviour
     void EndDay() {
         environment.SetActive(false);
         gmparent.GoToSleep();
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Car"))
+        {
+
+        }
     }
 
     void UpdateSun() {

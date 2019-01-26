@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanShakingGame : MonoBehaviour
+public class CanShakingGame : MonoBehaviour, HomelessGame
 {
     public GameManager GM;
     public float coinMultiplier;
@@ -13,6 +13,11 @@ public class CanShakingGame : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public float getMoney()
+    {
+        return MoneyGenerated;
     }
 
     void OnEnable() {

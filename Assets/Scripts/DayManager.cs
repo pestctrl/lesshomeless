@@ -11,6 +11,8 @@ public class DayManager : MonoBehaviour
     public GameManager gmparent;
 
     public CanShakingGame can;
+
+    public HomelessGame activeGame;
     
     public float secondsInFullDay = 20f;
     [Range(0,1)]
@@ -47,6 +49,7 @@ public class DayManager : MonoBehaviour
 
         // Enable the can game
         can.enabled = true;
+        activeGame = can;
     }
 
     void Update()
@@ -60,7 +63,7 @@ public class DayManager : MonoBehaviour
                 Debug.Log("Day is done");
 
                 // Grab money generated
-                gmparent.AddMoney(can.MoneyGenerated);
+                gmparent.AddMoney(activeGame.getMoney());
 
                 // Finish Day
                 active = false;

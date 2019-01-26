@@ -6,7 +6,6 @@ public class CanShakingGame : MonoBehaviour, HomelessGame
 {
     public GameManager GM;
     public float coinMultiplier;
-    public bool coinGameStart;
     public float MoneyGenerated;
 
     // Start is called before the first frame update
@@ -27,10 +26,7 @@ public class CanShakingGame : MonoBehaviour, HomelessGame
     // Update is called once per frame
     void Update()
     {
-        if (coinGameStart)
-        {
-            StartCoroutine(MeasureWait());
-        }
+        StartCoroutine(MeasureWait());
     }
 
 

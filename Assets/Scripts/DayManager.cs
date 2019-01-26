@@ -15,8 +15,6 @@ public class DayManager : MonoBehaviour
     public HomelessGame activeGame;
     
     public float secondsInFullDay = 20f;
-    [Range(0,1)]
-    public float currentTimeOfDay = 0;
     [HideInInspector]
     public float timeMultiplier = 1f;
     float sunInitialIntensity;
@@ -29,11 +27,13 @@ public class DayManager : MonoBehaviour
         sunInitialIntensity = sun.intensity;
     }
 
-    public void BeginDay()
+    public void BeginDay(InventoryManager inven)
     {
         // Reset timer, and show the environment
         time = 0.15f;
         environment.SetActive(true);
+
+        if(inven.haveSqueegee) Debug.Log("Have the squeegee");
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
@@ -65,6 +65,9 @@ public class DayManager : MonoBehaviour
                 // Grab money generated
                 gmparent.AddMoney(activeGame.getMoney());
 
+                // Disable all games
+                can.enabled = false;
+                
                 // Finish Day
                 active = false;
                 EndDay();
@@ -81,14 +84,14 @@ public class DayManager : MonoBehaviour
         sun.transform.localRotation = Quaternion.Euler((time * 360f) - 90, 170, 0);
  
         float intensityMultiplier = 1;
-        if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f) {
+        if (time <= 0.23f || time >= 0.75f) {
             intensityMultiplier = 0;
         }
-        else if (currentTimeOfDay <= 0.25f) {
-            intensityMultiplier = Mathf.Clamp01((currentTimeOfDay - 0.23f) * (1 / 0.02f));
+        else if (time <= 0.25f) {
+            intensityMultiplier = Mathf.Clamp01((time - 0.23f) * (1 / 0.02f));
         }
-        else if (currentTimeOfDay >= 0.73f) {
-            intensityMultiplier = Mathf.Clamp01(1 - ((currentTimeOfDay - 0.73f) * (1 / 0.02f)));
+        else if (time >= 0.73f) {
+            intensityMultiplier = Mathf.Clamp01(1 - ((time - 0.73f) * (1 / 0.02f)));
         }
  
         sun.intensity = sunInitialIntensity * intensityMultiplier;

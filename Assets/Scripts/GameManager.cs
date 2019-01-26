@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public DayManager daym;
+    public InventoryManager inven;
     public float multiplier = 1;
     float money;
     
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Hello, new day!");
             
             // Run pre-run stuff and disable script
-            daym.BeginDay();
+            daym.BeginDay(inven);
             this.gameObject.SetActive(false);
         }
     }

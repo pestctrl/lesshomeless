@@ -20,7 +20,7 @@ public class ActivateOnPickup : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Street") {
+        if(!dm.active && other.tag == "Street") {
             dm.GameSelected(this.gameObject.tag);
         }
     }

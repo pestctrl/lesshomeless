@@ -29,11 +29,9 @@ public class GameManager : MonoBehaviour
         money += f;
     }
 
-    public void WrapUpDay() {
-        Debug.Log("The day is over!!");
-        money += (int)multiplier;
-        multiplier *= 1.5f;
-        Debug.Log("You have $" + money + "!!!!");
+    public void GoToSleep() {
+        Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
+        Debug.Log("You have $" + money + "!!!");
         this.gameObject.SetActive(true);
     }
 }

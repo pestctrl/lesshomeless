@@ -30,7 +30,6 @@ public class DayManager : MonoBehaviour
 
     public void BeginDay()
     {
-        active = true;
         time = 0.15f;
         environment.SetActive(true);
         this.gameObject.SetActive(false);
@@ -39,6 +38,7 @@ public class DayManager : MonoBehaviour
     public void GameSelected(string tag)
     {
         Debug.Log("The Game has been selected " + tag);
+        active = true;
         this.gameObject.SetActive(true);
         can.enabled = true;
     }
@@ -53,11 +53,15 @@ public class DayManager : MonoBehaviour
             if(time > 1) {
                 Debug.Log("Day is done");
                 gmparent.AddMoney(can.MoneyGenerated);
-                environment.SetActive(false);
-                gmparent.WrapUpDay();
                 active = false;
+                EndDay();
             }
         }
+    }
+
+    void EndDay() {
+        environment.SetActive(false);
+        gmparent.GoToSleep();
     }
 
     void UpdateSun() {

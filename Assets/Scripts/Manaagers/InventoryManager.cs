@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     public int numDogfoods;
     public float foodVal = 100;
     public float waterVal = 100;
+    public float money;
 
     void Start()
     {

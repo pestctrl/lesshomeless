@@ -12,5 +12,9 @@ public class TeleportToBox : MonoBehaviour
         {
             GM.GoToBox();
         }
+        if (other.tag == "Bed")
+        {
+            GM.Sleep();
+        }
     }
 }

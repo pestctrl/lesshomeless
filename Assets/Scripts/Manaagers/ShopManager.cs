@@ -4,20 +4,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-    public GameManager GM;
     public InventoryManager IM;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Shop(string itemName)
     {
@@ -26,7 +13,7 @@ public class ShopManager : MonoBehaviour
         {
             case "Squeegee_ShopItem":
                 itemPrice = 0;
-                if(GM.money >= itemPrice)
+                if(IM.money >= itemPrice)
                 {
                     print("added Squeegee");
                     IM.haveSqueegee = true;
@@ -34,7 +21,7 @@ public class ShopManager : MonoBehaviour
                 break;
             case "SwordFish_ShopItem":
                 itemPrice = 0;
-                if (GM.money >= itemPrice)
+                if (IM.money >= itemPrice)
                 {
                     print("added fish");
                     IM.haveSwordfish = true;
@@ -42,7 +29,7 @@ public class ShopManager : MonoBehaviour
                 break;
             case "DogFood_ShopItem":
                 itemPrice = 0;
-                if (GM.money >= itemPrice)
+                if (IM.money >= itemPrice)
                 {
                     print("added dogfood");
                     IM.numDogfoods++;
@@ -50,7 +37,7 @@ public class ShopManager : MonoBehaviour
                 break;
             case "Water_ShopItem":
                 itemPrice = 0;
-                if (GM.money >= itemPrice)
+                if (IM.money >= itemPrice)
                 {
                     print("added water");
                     IM.waterVal = IM.waterVal+25;
@@ -58,7 +45,7 @@ public class ShopManager : MonoBehaviour
                 break;
             case "Food_ShopItem":
                 itemPrice = 0;
-                if (GM.money >= itemPrice)
+                if (IM.money >= itemPrice)
                 {
                     print("added food");
                     IM.foodVal = IM.foodVal+25;

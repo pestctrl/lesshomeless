@@ -13,6 +13,7 @@ TagManager:
   - KennalSpawn
   - ShopItem
   - Box
+  - Bed
   layers:
   - Default
   - TransparentFX

@@ -8,18 +8,14 @@ public class CanShakingGame : MonoBehaviour, HomelessGame
     public float coinMultiplier;
     public float MoneyGenerated;
 
-    // Start is called before the first frame update
-    void Start()
+    public float GetMoney()
     {
-        
-    }
-
-    public float getMoney()
-    {
+        this.enabled = false;
         return MoneyGenerated;
     }
 
-    void OnEnable() {
+    public void StartGame() {
+        this.enabled = true;
         MoneyGenerated = 0;
     }
 

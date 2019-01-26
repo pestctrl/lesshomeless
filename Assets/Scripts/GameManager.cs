@@ -12,13 +12,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         money = 0;
+        daym.gmparent = this;
     }
 
     void Update()
     {
         if(!daym.active)
         {
-            //Debug.Log("Hello, new day!");
+            Debug.Log("Hello, new day!");
             
             // Run pre-run stuff and disable script
             daym.BeginDay(inven);
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
         money += f;
     }
 
-    public void GoToSleep() {
+    public void GoToBox() {
         // Display money earned
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + money + "!!!");

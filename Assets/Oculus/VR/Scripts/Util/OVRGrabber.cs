@@ -23,10 +23,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class OVRGrabber : MonoBehaviour
 {
+    //public GameManager GM;
+    public MonoBehaviour gamemanager;
     // Grip trigger thresholds for picking up objects, with some hysteresis.
     public float grabBegin = 0.55f;
     public float grabEnd = 0.35f;
-
     // Demonstrates parenting the held object to the hand's transform when grabbed.
     // When false, the grabbed object is moved every FixedUpdate using MovePosition.
     // Note that MovePosition is required for proper physics simulation. If you set this to true, you can
@@ -206,8 +207,10 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
+    public string tag;
     protected virtual void GrabBegin()
     {
+        
         float closestMagSq = float.MaxValue;
 		OVRGrabbable closestGrabbable = null;
         Collider closestGrabbableCollider = null;
@@ -247,6 +250,10 @@ public class OVRGrabber : MonoBehaviour
             }
 
             m_grabbedObj = closestGrabbable;
+            tag = m_grabbedObj.transform.tag;
+            
+            print(tag);
+
             m_grabbedObj.GrabBegin(this, closestGrabbableCollider);
 
             m_lastPos = transform.position;

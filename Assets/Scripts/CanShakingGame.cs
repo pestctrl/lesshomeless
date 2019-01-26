@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CanShakingGame : MonoBehaviour
 {
-    public GameObject Can;
+    public GameManager GM;
     public float coinMultiplier;
     public bool coinGameStart;
+    public float MoneyGenerated;
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +20,21 @@ public class CanShakingGame : MonoBehaviour
     {
         if (coinGameStart)
         {
-            coinMultiplier = GetMultiplier();
+            StartCoroutine(MeasureWait());
         }
     }
 
-    float GetMultiplier()
+
+    IEnumerator MeasureWait()
     {
         float mult;
-        Vector3 lastVelocity = Can.GetComponent<Rigidbody>().velocity;
+        float lastPos = Mathf.Abs(transform.position.magnitude);
+        yield return new WaitForSeconds(.4f);
+        float Pos = Mathf.Abs(transform.position.magnitude);
 
-        mult = lastVelocity.magnitude * 10;
-        return mult;
+        mult = Mathf.Abs(Pos - lastPos) * 50;
+        MoneyGenerated = MoneyGenerated + (mult * 1 * Time.deltaTime);
+        print(MoneyGenerated);
 
     }
 }

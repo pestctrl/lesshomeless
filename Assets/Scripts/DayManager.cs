@@ -34,8 +34,9 @@ public class DayManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void GameSelected()
+    public void GameSelected(string tag)
     {
+
         Debug.Log("The Game has been selected");
         this.gameObject.SetActive(true);
     }

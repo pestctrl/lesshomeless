@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public DayManager daym;
-    float multiplier = 1;
+    public float multiplier = 1;
     int money;
     
     // Start is called before the first frame update

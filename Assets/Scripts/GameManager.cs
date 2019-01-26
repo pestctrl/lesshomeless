@@ -7,12 +7,14 @@ public class GameManager : MonoBehaviour
     public DayManager daym;
     public InventoryManager inven;
     public float multiplier = 1;
-    public float money;
+    float money;
+    float timewait;
     
     void Start()
     {
         money = 0;
         daym.gmparent = this;
+        boxenv.SetActive(false);
     }
 
     void Update()
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
             daym.BeginDay(inven);
             this.gameObject.SetActive(false);
         }
+        if(timewait > 0) {
+            timewait -= 0.01f;
+        }
     }
 
     public void AddMoney(float f) {
@@ -32,10 +37,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void GoToBox() {
-        // Display money earned
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + money + "!!!");
-        // Reactivate script and wait for the next day to start
+        
+    }
+
+    public void StartNewDay() {
         this.gameObject.SetActive(true);
+        boxenv.SetActive(false);
     }
 }

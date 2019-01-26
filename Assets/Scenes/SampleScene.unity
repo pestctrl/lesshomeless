@@ -1214,15 +1214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092a1defc143f0d52b23e252172c17ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sun: {fileID: 170076734}
   environment: {fileID: 832418803}
   gmparent: {fileID: 1881541081}
+  sun: {fileID: 2086300009}
   can: {fileID: 798535912}
   squeegee: {fileID: 116754222}
-  secondsInFullDay: 20
-  timeMultiplier: 1
-  time: 0
-  gameSelected: 0
   active: 0
 --- !u!4 &1131164023
 Transform:
@@ -1586,4 +1582,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2086300008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086300010}
+  - component: {fileID: 2086300009}
+  m_Layer: 0
+  m_Name: SunTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086300009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086300008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbde67f5cd4cb21d8da20dff58e1529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 170076734}
+  secondsInFullDay: 20
+  timeMultiplier: 1
+  time: 0
+  active: 0
+--- !u!4 &2086300010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086300008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0147533, y: -1.4830477, z: -3.3741908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

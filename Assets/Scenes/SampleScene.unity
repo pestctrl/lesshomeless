@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 116754219}
   - component: {fileID: 116754218}
   - component: {fileID: 116754217}
+  - component: {fileID: 116754221}
   m_Layer: 0
   m_Name: SqueegeGrab
   m_TagString: Squeege
@@ -192,6 +193,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.00001}
+--- !u!114 &116754221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116754216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b522a458ac30b05ab3837916a12e197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 1131164022}
 --- !u!1 &151660568
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,9 +218,10 @@ GameObject:
   - component: {fileID: 151660572}
   - component: {fileID: 151660571}
   - component: {fileID: 151660570}
+  - component: {fileID: 151660573}
   m_Layer: 0
   m_Name: Street
-  m_TagString: Untagged
+  m_TagString: Street
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,6 +298,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151660568}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &151660573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151660568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000000029802322, y: 0, z: -0.000000923872}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,6 +822,7 @@ GameObject:
   - component: {fileID: 798535911}
   - component: {fileID: 798535916}
   - component: {fileID: 798535915}
+  - component: {fileID: 798535917}
   m_Layer: 0
   m_Name: CupGrab
   m_TagString: Cup
@@ -922,6 +951,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &798535917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798535909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b522a458ac30b05ab3837916a12e197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 1131164022}
 --- !u!1 &832418803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamemanager: {fileID: 1881541081}
   grabBegin: 0.55
   grabEnd: 0.35
   m_parentHeldObject: 0
@@ -1330,7 +1371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamemanager: {fileID: 1881541081}
   grabBegin: 0.55
   grabEnd: 0.35
   m_parentHeldObject: 0

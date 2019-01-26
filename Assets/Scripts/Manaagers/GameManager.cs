@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void Sleep()
     {
+        print("SLEEP");
         this.gameObject.SetActive(true);
         BoxEnvironment.SetActive(false);
         daym.BeginDay(inven);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
+    public List<GameObject> CarSpawns;
     // Start is called before the first frame update
     void Start()
     {

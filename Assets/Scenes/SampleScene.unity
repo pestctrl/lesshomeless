@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 116754218}
   - component: {fileID: 116754217}
   - component: {fileID: 116754221}
+  - component: {fileID: 116754222}
   m_Layer: 0
   m_Name: SqueegeGrab
   m_TagString: Squeege
@@ -206,6 +207,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dm: {fileID: 1131164022}
+--- !u!114 &116754222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116754216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0eea82be3f06e4d9d75852a9374587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyGenerated: 0
+  GM: {fileID: 1881541081}
+  Car: {fileID: 186400194038367772, guid: a844ecd0e412ff24089c9a5e9b9ab5e2, type: 3}
+  SpawnPos: {fileID: 668986602}
 --- !u!1 &151660568
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +727,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656514748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &668986602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668986603}
+  m_Layer: 0
+  m_Name: SqueegeeCarSpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668986603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668986602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.105, y: 0, z: -0.998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &751227738 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a,
@@ -874,7 +921,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GM: {fileID: 1881541081}
   coinMultiplier: 0
-  coinGameStart: 1
   MoneyGenerated: 0
 --- !u!54 &798535913
 Rigidbody:
@@ -999,6 +1045,49 @@ Transform:
   - {fileID: 949706389}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &864324590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864324592}
+  - component: {fileID: 864324591}
+  m_Layer: 0
+  m_Name: CarSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &864324591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864324590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32bd3578862161f42ba8d44c5fb5c13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &864324592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864324590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.59, y: 0.204, z: 5.328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &949706385
 GameObject:
@@ -1126,7 +1215,6 @@ MonoBehaviour:
   gmparent: {fileID: 1881541081}
   can: {fileID: 798535912}
   secondsInFullDay: 20
-  currentTimeOfDay: 0
   timeMultiplier: 1
   time: 0
   active: 0
@@ -1432,6 +1520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daym: {fileID: 1131164022}
+  inven: {fileID: 0}
   multiplier: 1
 --- !u!4 &1881541082
 Transform:

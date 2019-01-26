@@ -41,9 +41,4 @@ public class GameManager : MonoBehaviour
         Debug.Log("You have $" + money + "!!!");
         
     }
-
-    public void StartNewDay() {
-        this.gameObject.SetActive(true);
-        boxenv.SetActive(false);
-    }
 }

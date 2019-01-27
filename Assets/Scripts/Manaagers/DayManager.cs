@@ -33,6 +33,16 @@ public class DayManager : MonoBehaviour
         games.SqueegeeGame.gameObject.SetActive(inven.haveSqueegee);
         games.SwordFishGame.gameObject.SetActive(inven.haveSwordfish);
 
+        // Handle Dog
+        if(inven.DogAlive) {
+            inven.Grave.SetActive(false);
+            inven.Dog.SetActive(true);
+        }
+        else {
+            inven.Grave.SetActive(true);
+            inven.Dog.SetActive(false);
+        }
+
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
     }

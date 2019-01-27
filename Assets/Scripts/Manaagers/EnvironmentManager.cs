@@ -5,13 +5,18 @@ using UnityEngine;
 public class EnvironmentManager : MonoBehaviour
 {
    // public GameObject[] CarSpawns = new GameObject[2];
-    public GameObject Car;
-    public GameObject Person;
+    public GameObject CarSpawn;
+    public GameObject PeopleSpawn;
+    public GameObject[] CarTypes;
+    public GameObject[] People;
+    bool spawnCars;
+    bool spawnPeople;
     // Start is called before the first frame update
     void OnEnable()
     {
-        StartCoroutine(BackAndFourthCycle(GameObject.FindGameObjectsWithTag("CarSpawn")[0], Car, 120, 10, Random.Range(4, 7)));
-
+        StartCoroutine(BackAndFourthCycle(CarSpawn, CarTypes, 10, -1 * CarTypes[0].transform.up * 240, 2, 6));
+        
+        if(spawnPeople) StartCoroutine(BackAndFourthCycle(PeopleSpawn, People, 10, -1 * CarTypes[0].transform.up * 120, 4, 7));
     }
 
     // Update is called once per frame
@@ -20,18 +25,19 @@ public class EnvironmentManager : MonoBehaviour
        
     }
 
-    IEnumerator BackAndFourthCycle(GameObject spawn, GameObject obj, float thrust, float timeDestroy, float timeSpawnDelay)
+    IEnumerator BackAndFourthCycle(GameObject spawn, GameObject[] candidates, int timeDestroy, Vector3 thrust, int dlb, int dub)
     {
             bool spawned = false;
             while (!spawned)
             {
+                GameObject obj = candidates[(int)Random.Range(0,candidates.Length)];
                 GameObject instance = Instantiate(obj, spawn.transform.position, spawn.transform.rotation);
                 spawned = true;
                 //randomize color of instance
                 //randomize type of car
-                instance.GetComponent<Rigidbody>().AddForce(-1 * obj.transform.up * thrust, ForceMode.Force);
+                instance.GetComponent<Rigidbody>().AddForce(thrust, ForceMode.Force);
                 StartCoroutine(DestroyObjDelay(instance, timeDestroy));
-                yield return new WaitForSeconds(timeSpawnDelay);
+                yield return new WaitForSeconds(Random.Range(dlb,dub));
                 spawned = false;
             }  
     }

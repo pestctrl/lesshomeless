@@ -9,14 +9,14 @@ public class EnvironmentManager : MonoBehaviour
     public GameObject PeopleSpawn;
     public GameObject[] CarTypes;
     public GameObject[] People;
-    bool spawnCars;
-    bool spawnPeople;
+    public bool spawnCars;
+    public bool spawnPeople;
     // Start is called before the first frame update
     void OnEnable()
     {
         StartCoroutine(BackAndFourthCycle(CarSpawn, CarTypes, 10, -1 * CarTypes[0].transform.up * 240, 2, 6));
         
-        if(spawnPeople) StartCoroutine(BackAndFourthCycle(PeopleSpawn, People, 10, -1 * CarTypes[0].transform.up * 120, 4, 7));
+        StartCoroutine(BackAndFourthCycle(PeopleSpawn, People, 10, -1 * CarTypes[0].transform.up * 120, 4, 7));
     }
 
     // Update is called once per frame

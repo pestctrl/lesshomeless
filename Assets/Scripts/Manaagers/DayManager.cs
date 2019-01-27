@@ -6,6 +6,7 @@ public class DayManager : MonoBehaviour
 {
     // Interacts with
     public GameObject environment;
+    public GameObject basket;
     public GameManager gmparent;
     public SunTimer sun;
 
@@ -27,7 +28,7 @@ public class DayManager : MonoBehaviour
     {
         // Show the environment
         environment.SetActive(true);
-
+        basket.SetActive(false);
         // Let the gamemanager know that the day is on it's way
         active = true;
         activeGame = null;
@@ -51,7 +52,9 @@ public class DayManager : MonoBehaviour
         switch(tag) {
             case "Cup": activeGame = can; break;
             case "Squeege": activeGame = squeegee; break;
-            case "Swordfish": activeGame = sword; break;
+            case "Swordfish": activeGame = sword;
+                basket.SetActive(true);
+                break;
         }
 
         activeGame.StartGame();

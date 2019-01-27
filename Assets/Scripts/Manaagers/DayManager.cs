@@ -6,14 +6,11 @@ public class DayManager : MonoBehaviour
 {
     // Interacts with
     public GameObject environment;
-    public GameObject basket;
     public GameManager gmparent;
     public SunTimer sun;
 
     // Triggers
-    public CanShakingGame can;
-    public SqueegeeGame squeegee;
-    public SwordFish sword;
+    public HomelessGameObjects games;
     public HomelessGame activeGame;
 
     // State
@@ -28,14 +25,13 @@ public class DayManager : MonoBehaviour
     {
         // Show the environment
         environment.SetActive(true);
-        basket.SetActive(false);
         // Let the gamemanager know that the day is on it's way
         active = true;
         activeGame = null;
 
         // Only show these items if purchased
-        squeegee.gameObject.SetActive(inven.haveSqueegee);
-        sword.gameObject.SetActive(inven.haveSwordfish);
+        games.SqueegeeGame.gameObject.SetActive(inven.haveSqueegee);
+        games.SwordFishGame.gameObject.SetActive(inven.haveSwordfish);
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);
@@ -50,14 +46,12 @@ public class DayManager : MonoBehaviour
 
         // Enable the correct game
         switch(tag) {
-            case "Cup": activeGame = can; break;
-            case "Squeege": activeGame = squeegee; break;
-            case "Swordfish": activeGame = sword;
-                basket.SetActive(true);
-                break;
+            case "Cup": activeGame = games.CanShakingGame; break;
+            case "Squeege": activeGame = games.SqueegeeGame; break;
+            case "Swordfish": activeGame = games.SwordFishGame; break;
         }
 
-        activeGame.StartGame();
+        activeGame.StartGame(games);
         sun.StartDayTimer();
     }
 
@@ -67,11 +61,8 @@ public class DayManager : MonoBehaviour
             if(!sun.active) {
                 //Debug.Log("Earned $" + activeGame.GetMoney());
                 // Grab money generated
-                gmparent.AddMoney(activeGame.GetMoney());
-
-                // Disable all games
-                can.enabled = false;
-                squeegee.enabled = false;
+                float money = activeGame.GetMoneyAndEndGame();
+                gmparent.AddMoney(money);
                 
                 // Finish Day
                 active = false;

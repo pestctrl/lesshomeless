@@ -9,6 +9,8 @@ public class ShopManager : MonoBehaviour
     public void Shop(string itemName)
     {
         float itemPrice = 0;
+        print(itemName);
+        print(IM.money);
         switch (itemName)
         {
             case "Squeegee_ShopItem":

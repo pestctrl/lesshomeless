@@ -29,7 +29,7 @@ public class EnvironmentManager : MonoBehaviour
                 spawned = true;
                 //randomize color of instance
                 //randomize type of car
-                instance.GetComponent<Rigidbody>().AddForce(obj.transform.forward * thrust, ForceMode.Force);
+                instance.GetComponent<Rigidbody>().AddForce(-1 * obj.transform.up * thrust, ForceMode.Force);
                 StartCoroutine(DestroyObjDelay(instance, timeDestroy));
                 yield return new WaitForSeconds(timeSpawnDelay);
                 spawned = false;

@@ -35,7 +35,7 @@ public class CanShakingGame : MonoBehaviour, HomelessGame
         float power = Mathf.Abs(Pos - lastPos);
         if (power > .10)
         {
-            GetComponent<SoundMixer>().PlayAudio();
+            //GetComponent<SoundMixer>().PlayAudio();
         }
 
         mult = power * 50;

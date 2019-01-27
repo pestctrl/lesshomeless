@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public GameObject[] ResetSpawnObjs = new GameObject[4];
     public GameObject BoxEnvironment;
     public float multiplier = 1;
-    float timewait;
     public GameObject boxPrefab;
     public Transform outEnviron;
 
@@ -21,12 +20,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space")) //testing resets
-        {
-            print("space pressed");
-            ResetDaySpawns();
-        }
-
         if(!daym.active)
         {
             Debug.Log("Hello, new day!");
@@ -34,9 +27,6 @@ public class GameManager : MonoBehaviour
             // Run pre-run stuff and disable script
             daym.BeginDay(inven);
             this.gameObject.SetActive(false);
-        }
-        if(timewait > 0) {
-            timewait -= 0.01f;
         }
     }
 
@@ -50,26 +40,15 @@ public class GameManager : MonoBehaviour
         ResetDaySpawns();
         BoxEnvironment.SetActive(false);
         this.gameObject.SetActive(true);
+        print("Sleep finished"+ this.gameObject.active);
     }
 
     void ResetDaySpawns()
     {
         for (int i = 0; i < ResetSpawnObjs.Length; i++)
         {
-            
-
             ResetSpawnObjs[i].transform.localPosition = SpawnPoints[i].localPosition;
             ResetSpawnObjs[i].transform.localRotation = SpawnPoints[i].localRotation;
-
-            if (ResetSpawnObjs[i].transform.tag == "Box")
-            {
-                print("did dat");
-                Destroy(ResetSpawnObjs[i]);
-                GameObject box = Instantiate(boxPrefab, SpawnPoints[i].position, new Quaternion(-90,120,-212,0));
-                box.transform.SetParent(outEnviron);
-                
-            }
-
         }
     }
 

@@ -66,16 +66,19 @@ public class DayManager : MonoBehaviour
                 
                 // Finish Day
                 active = false;
+                Debug.Log("Day finished");
             }
         }
     }
 
     public void EndDay() {
-        environment.SetActive(false);
-        gmparent.GoToBox();
-        foreach (GameObject Car in GameObject.FindGameObjectsWithTag("Car"))
-        {
-            Destroy(Car);
+        if(!sun.active) {
+            environment.SetActive(false);
+            gmparent.GoToBox();
+            foreach (GameObject Car in GameObject.FindGameObjectsWithTag("Car"))
+            {
+                Destroy(Car);
+            }
         }
     }
 }

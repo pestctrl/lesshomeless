@@ -20,6 +20,7 @@ public class SunTimer : MonoBehaviour
     
     public void StartDayTimer()
     {
+        Debug.Log("Day timer started");
         time = 0.18f;
         active = true;
     }

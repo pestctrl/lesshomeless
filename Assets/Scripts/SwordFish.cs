@@ -10,6 +10,8 @@ public class SwordFish : MonoBehaviour, HomelessGame
     int t1Count;//mid
     int t2Count;//high
 
+    public GameObject speared;
+
     public float GetMoney()
     {
         float MoneyGenerated = (t1Count * 10) + (t2Count * 20);
@@ -28,13 +30,17 @@ public class SwordFish : MonoBehaviour, HomelessGame
 
     void OnParticleCollision(GameObject obj)
     {
-        if (obj.tag == "TrashHigh")
-        {
-            t2Count++;
-        }
-        if (obj.tag == "TrashMid")
-        {
-            t1Count++;
+        if(!speared.activeSelf)
+        {   
+            if (obj.tag == "TrashHigh")
+            {
+                t2Count++;
+            }
+            if (obj.tag == "TrashMid")
+            {
+                t1Count++;
+            }
+            speared.SetActive(true);
         }
         print("collided with a " + obj.tag);
     }

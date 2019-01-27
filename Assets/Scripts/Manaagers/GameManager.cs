@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Space"))
+        if (Input.GetButtonDown("Space")) //testing resets
         {
             ResetDaySpawns();
         }

@@ -6,21 +6,10 @@ public class ActivateOnPickup : MonoBehaviour
 {
     public DayManager dm;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerExit(Collider other)
     {
         if(dm.activeGame == null && other.tag == "Street") {
+            print(this.gameObject.tag + " Game Start");
             dm.GameSelected(this.gameObject.tag);
         }
     }

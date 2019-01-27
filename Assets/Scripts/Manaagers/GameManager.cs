@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddMoney(float f) {
-        inven.money += 1;
+        inven.money += f;
     }
 
     public void Sleep()

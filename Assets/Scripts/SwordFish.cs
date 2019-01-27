@@ -23,6 +23,7 @@ public class SwordFish : MonoBehaviour, HomelessGame
 
     public void StartGame()
     {
+        print("start sword fish game");
         this.enabled = true;
         t1.Play();
         t2.Play();

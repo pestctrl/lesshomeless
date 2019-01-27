@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        
+        UpdateText();
     }
 
     void UpdateText()
@@ -34,9 +34,12 @@ public class InventoryManager : MonoBehaviour
 
     IEnumerator Consume()
     {
-        yield return new WaitForSecondsRealtime(5);
-        foodVal--;
-        waterVal--;
+        while (true)
+        {
+            yield return new WaitForSeconds(2);
+            foodVal--;
+            waterVal--;
+        }
     }
 
 }

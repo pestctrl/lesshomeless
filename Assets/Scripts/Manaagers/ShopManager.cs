@@ -17,6 +17,7 @@ public class ShopManager : MonoBehaviour
                 {
                     print("added Squeegee");
                     IM.haveSqueegee = true;
+                    IM.money = IM.money - itemPrice;
                 }
                 break;
             case "SwordFish_ShopItem":
@@ -25,6 +26,7 @@ public class ShopManager : MonoBehaviour
                 {
                     print("added fish");
                     IM.haveSwordfish = true;
+                    IM.money = IM.money - itemPrice;
                 }
                 break;
             case "DogFood_ShopItem":
@@ -33,6 +35,7 @@ public class ShopManager : MonoBehaviour
                 {
                     print("added dogfood");
                     IM.dogFood = IM.dogFood + 45;
+                    IM.money = IM.money - itemPrice;
                 }
                 break;
             case "Water_ShopItem":
@@ -41,6 +44,7 @@ public class ShopManager : MonoBehaviour
                 {
                     print("added water");
                     IM.waterVal = IM.waterVal+25;
+                    IM.money = IM.money - itemPrice;
                 }
                 break;
             case "Food_ShopItem":
@@ -49,6 +53,7 @@ public class ShopManager : MonoBehaviour
                 {
                     print("added food");
                     IM.foodVal = IM.foodVal+25;
+                    IM.money = IM.money - itemPrice;
                 }
                 break;
             default:

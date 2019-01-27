@@ -37,7 +37,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
             if(dirtyValue <= 0)
             {
                 Debug.Log("New Car bitches");
-                MoneyGenerated = MoneyGenerated + 10;
+                MoneyGenerated = MoneyGenerated + 2;
                 NewCar();
             }
         }

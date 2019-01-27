@@ -27,7 +27,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
         newCar = Instantiate(Car, SpawnPos.transform.position, SpawnPos.transform.localRotation);
       
         //newCar.GetComponent<Animator>().Play("CarApproachSqueegee");
-        newCar.GetComponent<Animator>().SetBool("CarClean", false);
+        //newCar.GetComponent<Animator>().SetBool("CarClean", false);
         
         OldCar = newCar;
         dirtyValue = 100;
@@ -46,7 +46,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
             if(dirtyValue <= 0)
             {
                 //newCar.GetComponent<Animator>().Play(("CarLeave"));
-                OldCar.GetComponent<Animator>().SetBool("CarClean", true);
+                //OldCar.GetComponent<Animator>().SetBool("CarClean", true);
                 Destroy(OldCar);
                 Debug.Log("New Car bitches");
                 MoneyGenerated = MoneyGenerated + 2;

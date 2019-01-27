@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
         ResetDaySpawns();
         BoxEnvironment.SetActive(false);
         this.gameObject.SetActive(true);
+
+        if(inven.dogFood < 0) {
+            inven.DogAlive = false;
+        }
         print("Sleep finished"+ this.gameObject.active);
     }
 

@@ -7,12 +7,15 @@ public class InventoryManager : MonoBehaviour
 {
     public bool haveSqueegee;
     public bool haveSwordfish;
-    public int dogFood;
+    public float dogFood = 100;
     public float foodVal = 100;
     public float waterVal = 100;
     public float money;
 
+    public bool DogAlive = true;
     public TMP_Text StatusTxt;
+    public GameObject Grave;
+    public GameObject Dog;
 
     void Start()
     {
@@ -39,6 +42,7 @@ public class InventoryManager : MonoBehaviour
             yield return new WaitForSeconds(2);
             foodVal--;
             waterVal--;
+            dogFood--;
         }
     }
 

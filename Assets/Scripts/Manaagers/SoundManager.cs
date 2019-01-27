@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioClip CityAmbience;
+    public AudioClip CoinShakes;
+    public AudioClip Grab;
+    public AudioClip Purchase;
+    public AudioClip DogBark;
+    public AudioClip DogYelp;
+    public AudioClip BackgroundMusic;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

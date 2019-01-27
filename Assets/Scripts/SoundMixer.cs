@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundMixer : MonoBehaviour
 {
     public AudioSource AS;
+    public SoundManager SM;
     public AudioClip[] Clips = new AudioClip[1];
  
     void Start()
@@ -12,7 +13,7 @@ public class SoundMixer : MonoBehaviour
         AS = GetComponent<AudioSource>();
     }
 
-    void PlayAudio()
+    public void PlayAudio()
     {
         int r = Random.Range(0, Clips.Length);
         AS.clip = Clips[r];

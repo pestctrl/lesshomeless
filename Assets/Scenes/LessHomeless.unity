@@ -2683,7 +2683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668986602}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.183117, y: 12.687, z: 1.22}
+  m_LocalPosition: {x: 9.183117, y: 12.69, z: -4.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434593616}
@@ -9717,7 +9717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveSqueegee: 1
-  haveSwordfish: 1
+  haveSwordfish: 0
   dogFood: 0
   foodVal: 100
   waterVal: 100
@@ -9767,6 +9767,80 @@ Transform:
   m_Father: {fileID: 1623412042}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -83.59701, y: 63.868004, z: -253.008}
+--- !u!1001 &1296285913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8285152431780071853, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_Name
+      value: SqeegeeCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071853, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285152431780071848, guid: 844d8f8716bf3b840b007b7ec5afedaf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 844d8f8716bf3b840b007b7ec5afedaf, type: 3}
 --- !u!1001 &1299205750
 PrefabInstance:
   m_ObjectHideFlags: 0

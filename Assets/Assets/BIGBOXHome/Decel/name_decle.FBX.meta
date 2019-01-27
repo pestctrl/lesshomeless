@@ -1,9 +1,31 @@
 fileFormatVersion: 2
-guid: e836424badda517478946958aab93cc6
+guid: a22ac291c4d6e5846af9c3d38b368a12
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    2186277476908879412: ImportLogs
+    100000: //RootNode
+    100002: Object002
+    100004: Object003
+    100006: Object004
+    100008: Plane003
+    400000: //RootNode
+    400002: Object002
+    400004: Object003
+    400006: Object004
+    400008: Plane003
+    2100000: 07 - Default
+    2300000: Object002
+    2300002: Object003
+    2300004: Object004
+    2300006: Plane003
+    3300000: Object002
+    3300002: Object003
+    3300004: Object004
+    3300006: Plane003
+    4300000: Plane003
+    4300002: Object002
+    4300004: Object003
+    4300006: Object004
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -38,7 +60,6 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -63,9 +84,6 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -84,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

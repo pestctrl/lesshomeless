@@ -12,7 +12,7 @@ public class ShopManager : MonoBehaviour
         switch (itemName)
         {
             case "Squeegee_ShopItem":
-                itemPrice = 0;
+                itemPrice = 50;
                 if(IM.money >= itemPrice)
                 {
                     print("added Squeegee");
@@ -20,7 +20,7 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "SwordFish_ShopItem":
-                itemPrice = 0;
+                itemPrice = 100;
                 if (IM.money >= itemPrice)
                 {
                     print("added fish");
@@ -28,15 +28,15 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "DogFood_ShopItem":
-                itemPrice = 0;
+                itemPrice = 45;
                 if (IM.money >= itemPrice)
                 {
                     print("added dogfood");
-                    IM.numDogfoods++;
+                    IM.dogFood = IM.dogFood + 45;
                 }
                 break;
             case "Water_ShopItem":
-                itemPrice = 0;
+                itemPrice = 25;
                 if (IM.money >= itemPrice)
                 {
                     print("added water");
@@ -44,7 +44,7 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "Food_ShopItem":
-                itemPrice = 0;
+                itemPrice = 25;
                 if (IM.money >= itemPrice)
                 {
                     print("added food");

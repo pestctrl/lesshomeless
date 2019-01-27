@@ -34,7 +34,7 @@ public class DayManager : MonoBehaviour
 
         // Only show these items if purchased
         squeegee.gameObject.SetActive(inven.haveSqueegee);
-
+        sword.gameObject.SetActive(inven.haveSwordfish);
 
         // Wait for a game to be selected
         this.gameObject.SetActive(false);

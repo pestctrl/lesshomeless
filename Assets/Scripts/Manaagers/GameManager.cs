@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown("space")) //testing resets
         {
+            print("space pressed");
             ResetDaySpawns();
         }
 
@@ -55,8 +56,16 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < ResetSpawnObjs.Length; i++)
         {
-            ResetSpawnObjs[i].transform.position = SpawnPoints[i].position;
-            ResetSpawnObjs[i].transform.rotation = SpawnPoints[i].rotation;
+            
+
+            ResetSpawnObjs[i].transform.localPosition = SpawnPoints[i].localPosition;
+            ResetSpawnObjs[i].transform.localRotation = SpawnPoints[i].localRotation;
+
+            //if (ResetSpawnObjs[i].transform.tag == "Box")
+            //{
+            //    ResetSpawnObjs[i].transform.rotation = new Quaternion(-90, 0, -90, 0);
+            //}
+            
         }
     }
 

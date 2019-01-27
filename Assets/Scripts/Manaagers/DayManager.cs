@@ -62,7 +62,7 @@ public class DayManager : MonoBehaviour
     {
         if(active) {
             if(!sun.active) {
-                Debug.Log("Earned $" + activeGame.GetMoney());
+                //Debug.Log("Earned $" + activeGame.GetMoney());
                 // Grab money generated
                 gmparent.AddMoney(activeGame.GetMoney());
 

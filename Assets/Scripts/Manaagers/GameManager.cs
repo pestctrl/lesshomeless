@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetButtonDown("Space"))
+        {
+            ResetDaySpawns();
+        }
+
         if(!daym.active)
         {
             Debug.Log("Hello, new day!");
@@ -41,11 +46,9 @@ public class GameManager : MonoBehaviour
     public void Sleep()
     {
         print("SLEEP");
-        this.gameObject.SetActive(true);
         ResetDaySpawns();
         BoxEnvironment.SetActive(false);
-        daym.BeginDay(inven);
-
+        this.gameObject.SetActive(true);
     }
 
     void ResetDaySpawns()
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < ResetSpawnObjs.Length; i++)
         {
             ResetSpawnObjs[i].transform.position = SpawnPoints[i].position;
+            ResetSpawnObjs[i].transform.rotation = SpawnPoints[i].rotation;
         }
     }
 

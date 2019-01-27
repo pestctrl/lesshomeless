@@ -1417,7 +1417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656514748}
   m_LocalRotation: {x: -0.49999997, y: -0.50000006, z: -0.4999985, w: 0.50000155}
-  m_LocalPosition: {x: 11.937, y: 11.849, z: 1.96}
+  m_LocalPosition: {x: 11.912, y: 12.461, z: 1.96}
   m_LocalScale: {x: 0.4294944, y: 0.4294944, z: 0.4294944}
   m_Children: []
   m_Father: {fileID: 832418804}
@@ -1503,7 +1503,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656514748}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.22
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1520,7 +1520,7 @@ BoxCollider:
   m_GameObject: {fileID: 656514748}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.24618457, y: 0.11867212, z: 1.9907295}
   m_Center: {x: -1.5240146, y: -1.5669234, z: 0.9953658}
@@ -1675,7 +1675,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2323,9 +2323,6 @@ GameObject:
   - component: {fileID: 959713697}
   - component: {fileID: 959713696}
   - component: {fileID: 959713700}
-  - component: {fileID: 959713702}
-  - component: {fileID: 959713703}
-  - component: {fileID: 959713701}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -2422,50 +2419,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &959713701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959713695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b522a458ac30b05ab3837916a12e197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dm: {fileID: 1131164022}
---- !u!114 &959713702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959713695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 492dc65955b48bf5bad982af210f4b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  t1: {fileID: 1684506527}
-  t2: {fileID: 966432529}
---- !u!114 &959713703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959713695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1 &966432527
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,7 +7151,7 @@ MonoBehaviour:
   sun: {fileID: 1821737826}
   can: {fileID: 798535912}
   squeegee: {fileID: 116754222}
-  sword: {fileID: 959713702}
+  sword: {fileID: 0}
   active: 0
 --- !u!4 &1131164023
 Transform:
@@ -7599,7 +7552,7 @@ GameObject:
   - component: {fileID: 1364439714}
   m_Layer: 0
   m_Name: Swordfish
-  m_TagString: Untagged
+  m_TagString: Swordfish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8162,7 +8115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670866860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.823, y: 11.658, z: 1.96}
+  m_LocalPosition: {x: 11.823, y: 11.763, z: 1.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1623412042}

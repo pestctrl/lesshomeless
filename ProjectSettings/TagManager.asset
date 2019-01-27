@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cup
+  - Squeege
+  - Street
+  - Window
+  - CarSpawn
+  - Car
+  - KennalSpawn
+  - ShopItem
+  - Box
+  - Bed
+  - TrashHigh
+  - TrashMid
+  - Swordfish
+  - Basket
+  - Trash
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: e32c8ed61c2701f4bba3e3f98fe0dc4e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: //RootNode
+    100004: Dog
+    100006: Dog001
+    100008: Dog002
+    100010: Dog003
+    100012: Dog004
+    100014: Dog005
+    100016: Dog006
+    100018: dust
+    100020: dust001
+    100022: Object001
+    100024: Paper
+    100026: Paper001
+    100028: Paper002
+    100030: Paper003
+    100032: Paper004
+    100034: Paper005
+    100036: Paper006
+    100038: Paper007
+    100040: Plane002
+    400000: Box001
+    400002: //RootNode
+    400004: Dog
+    400006: Dog001
+    400008: Dog002
+    400010: Dog003
+    400012: Dog004
+    400014: Dog005
+    400016: Dog006
+    400018: dust
+    400020: dust001
+    400022: Object001
+    400024: Paper
+    400026: Paper001
+    400028: Paper002
+    400030: Paper003
+    400032: Paper004
+    400034: Paper005
+    400036: Paper006
+    400038: Paper007
+    400040: Plane002
+    2100000: 02 - Default
+    2100002: 01 - Default
+    2100004: 03 - Default
+    2300000: Box001
+    2300002: Dog
+    2300004: Dog001
+    2300006: Dog002
+    2300008: Dog003
+    2300010: Dog004
+    2300012: Dog005
+    2300014: Dog006
+    2300016: dust
+    2300018: dust001
+    2300020: Object001
+    2300022: Paper
+    2300024: Paper001
+    2300026: Paper002
+    2300028: Paper003
+    2300030: Paper004
+    2300032: Paper005
+    2300034: Paper006
+    2300036: Paper007
+    2300038: Plane002
+    3300000: Box001
+    3300002: Dog
+    3300004: Dog001
+    3300006: Dog002
+    3300008: Dog003
+    3300010: Dog004
+    3300012: Dog005
+    3300014: Dog006
+    3300016: dust
+    3300018: dust001
+    3300020: Object001
+    3300022: Paper
+    3300024: Paper001
+    3300026: Paper002
+    3300028: Paper003
+    3300030: Paper004
+    3300032: Paper005
+    3300034: Paper006
+    3300036: Paper007
+    3300038: Plane002
+    4300000: Box001
+    4300002: Paper
+    4300004: Paper001
+    4300006: Paper002
+    4300008: Paper003
+    4300010: dust
+    4300012: dust001
+    4300014: Paper004
+    4300016: Paper005
+    4300018: Paper006
+    4300020: Paper007
+    4300022: Dog
+    4300024: Dog001
+    4300026: Dog002
+    4300028: Dog003
+    4300030: Dog004
+    4300032: Dog005
+    4300034: Dog006
+    4300036: Plane002
+    4300038: Object001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

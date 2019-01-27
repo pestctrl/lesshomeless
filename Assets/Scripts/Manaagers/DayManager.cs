@@ -12,6 +12,7 @@ public class DayManager : MonoBehaviour
     // Triggers
     public CanShakingGame can;
     public SqueegeeGame squeegee;
+    public SwordFish sword;
     public HomelessGame activeGame;
 
     // State
@@ -48,10 +49,9 @@ public class DayManager : MonoBehaviour
 
         // Enable the correct game
         switch(tag) {
-            case "Cup": /*print("Got the can")*/;
-                activeGame = can;
-                break;
+            case "Cup": activeGame = can; break;
             case "Squeege": activeGame = squeegee; break;
+            case "Swordfish": activeGame = sword; break;
         }
 
         activeGame.StartGame();

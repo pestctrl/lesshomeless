@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public DayManager daym;
     public InventoryManager inven;
-    public GameObject[] SpawnPoints = new GameObject[4];
+    public Transform[] SpawnPoints = new Transform[4];
+    public GameObject[] ResetSpawnObjs = new GameObject[4];
     public GameObject BoxEnvironment;
     public float multiplier = 1;
     public float money;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         print("SLEEP");
         this.gameObject.SetActive(true);
+        ResetDaySpawns();
         BoxEnvironment.SetActive(false);
         daym.BeginDay(inven);
 
@@ -48,9 +50,9 @@ public class GameManager : MonoBehaviour
 
     void ResetDaySpawns()
     {
-        for (int i = 0; i < SpawnPoints.Length; i++)
+        for (int i = 0; i < ResetSpawnObjs.Length; i++)
         {
-
+            ResetSpawnObjs[i].transform.position = SpawnPoints[i].position;
         }
     }
 

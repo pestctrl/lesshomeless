@@ -8,7 +8,7 @@ public class TrashScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Basket")
+        if (other.tag == "Trash")
         {
             SF.speared.SetActive(false);
         }

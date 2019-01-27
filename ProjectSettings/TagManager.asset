@@ -18,6 +18,7 @@ TagManager:
   - TrashMid
   - Swordfish
   - Basket
+  - Trash
   layers:
   - Default
   - TransparentFX

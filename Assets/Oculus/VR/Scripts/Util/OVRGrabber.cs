@@ -318,12 +318,8 @@ public class OVRGrabber : MonoBehaviour
         }
         else
         {
-            if (!(grabbedRigidbody == null))
-            {
-                grabbedRigidbody.MovePosition(grabbablePosition);
-                grabbedRigidbody.MoveRotation(grabbableRotation);
-            }
-            
+            grabbedRigidbody.MovePosition(grabbablePosition);
+            grabbedRigidbody.MoveRotation(grabbableRotation);
         }
     }
 

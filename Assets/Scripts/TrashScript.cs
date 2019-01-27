@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TrashScript : MonoBehaviour
 {
-    public SwordFish SF;
-
-    void OnTriggerEnter(Collider other)
+    // Start is called before the first frame update
+    void Start()
     {
-        print("sword collide " + other.tag);
-        if (other.tag == "Basket")
-        {
-            SF.spearedObj.SetActive(false);
-        }
+        
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

@@ -6,7 +6,6 @@ public class DayManager : MonoBehaviour
 {
     // Interacts with
     public GameObject environment;
-    public GameObject basket;
     public GameManager gmparent;
     public SunTimer sun;
 
@@ -34,7 +33,6 @@ public class DayManager : MonoBehaviour
         activeGame = null;
 
         // Only show these items if purchased
-        basket.SetActive(false);
         squeegee.gameObject.SetActive(inven.haveSqueegee);
         sword.gameObject.SetActive(inven.haveSwordfish);
 
@@ -53,9 +51,7 @@ public class DayManager : MonoBehaviour
         switch(tag) {
             case "Cup": activeGame = can; break;
             case "Squeege": activeGame = squeegee; break;
-            case "Swordfish": activeGame = sword;
-                basket.SetActive(true);
-                    break;
+            case "Swordfish": activeGame = sword; break;
         }
 
         activeGame.StartGame();

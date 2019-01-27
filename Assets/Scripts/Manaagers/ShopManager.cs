@@ -9,12 +9,10 @@ public class ShopManager : MonoBehaviour
     public void Shop(string itemName)
     {
         float itemPrice = 0;
-        print(itemName);
         switch (itemName)
         {
             case "Squeegee_ShopItem":
-                itemPrice = 50;
-                print("$$$$ " + IM.money);
+                itemPrice = 0;
                 if(IM.money >= itemPrice)
                 {
                     print("added Squeegee");
@@ -22,7 +20,7 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "SwordFish_ShopItem":
-                itemPrice = 100;
+                itemPrice = 0;
                 if (IM.money >= itemPrice)
                 {
                     print("added fish");
@@ -30,15 +28,15 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "DogFood_ShopItem":
-                itemPrice = 40;
+                itemPrice = 0;
                 if (IM.money >= itemPrice)
                 {
                     print("added dogfood");
-                    IM.Dogfood = IM.Dogfood + 45;
+                    IM.numDogfoods++;
                 }
                 break;
             case "Water_ShopItem":
-                itemPrice = 20;
+                itemPrice = 0;
                 if (IM.money >= itemPrice)
                 {
                     print("added water");
@@ -46,7 +44,7 @@ public class ShopManager : MonoBehaviour
                 }
                 break;
             case "Food_ShopItem":
-                itemPrice = 20;
+                itemPrice = 0;
                 if (IM.money >= itemPrice)
                 {
                     print("added food");

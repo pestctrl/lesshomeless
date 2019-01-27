@@ -33,7 +33,7 @@ public class CanShakingGame : MonoBehaviour, HomelessGame
         yield return new WaitForSeconds(.4f);
         float Pos = Mathf.Abs(transform.position.magnitude);
 
-        mult = Mathf.Abs(Pos - lastPos) * 50;
+        mult = Mathf.Abs(Pos - lastPos) * 30;
         MoneyGenerated = MoneyGenerated + (mult * 1 * Time.deltaTime);
         //print(MoneyGenerated);
 

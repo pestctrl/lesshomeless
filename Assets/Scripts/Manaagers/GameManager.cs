@@ -6,16 +6,14 @@ public class GameManager : MonoBehaviour
 {
     public DayManager daym;
     public InventoryManager inven;
-    public Transform[] SpawnPoints = new Transform[4];
-    public GameObject[] ResetSpawnObjs = new GameObject[4];
+    public Transform[] SpawnPoints = new Transform[5];
+    public GameObject[] ResetSpawnObjs = new GameObject[5];
     public GameObject BoxEnvironment;
     public float multiplier = 1;
-    public float money;
     float timewait;
     
     void Start()
     {
-        money = 0;
         daym.gmparent = this;
     }
 
@@ -41,7 +39,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddMoney(float f) {
-        money += f;
+        inven.money += f;
     }
 
     public void Sleep()
@@ -71,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToBox() {
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
-        Debug.Log("You have $" + money + "!!!");
+        Debug.Log("You have $" + inven.money + "!!!");
         this.gameObject.SetActive(false);
         BoxEnvironment.SetActive(true);
 

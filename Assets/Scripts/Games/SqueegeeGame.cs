@@ -23,6 +23,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
     public void NewCar() //bring new car into the field
     {
         GameObject newCar = Instantiate(Car, SpawnPos.transform.position, SpawnPos.transform.localRotation);
+        newCar.GetComponent<Animator>().SetBool("CarDone", false);
         Destroy(OldCar);
         OldCar = newCar;
         dirtyValue = 100;

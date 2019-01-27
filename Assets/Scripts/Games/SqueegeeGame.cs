@@ -22,7 +22,7 @@ public class SqueegeeGame : MonoBehaviour, HomelessGame
 
     public void NewCar() //bring new car into the field
     {
-        GameObject newCar = Instantiate(Car, SpawnPos.transform.position, Quaternion.identity);
+        GameObject newCar = Instantiate(Car, SpawnPos.transform.position, SpawnPos.transform.localRotation);
         Destroy(OldCar);
         OldCar = newCar;
         dirtyValue = 100;

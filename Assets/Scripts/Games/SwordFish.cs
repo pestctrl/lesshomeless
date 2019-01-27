@@ -21,6 +21,7 @@ public class SwordFish : MonoBehaviour, HomelessGame
     public void StartGame(HomelessGameObjects games)
     {
         print("start sword fish game");
+        gameobjects = games;
         GameObject basket = gameobjects.Basket;
         basket.SetActive(true);
         this.enabled = true;

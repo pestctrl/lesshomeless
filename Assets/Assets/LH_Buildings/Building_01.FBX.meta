@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 9082c3590f35c444fb67e2490c140e21
+guid: 55ac7ae6cb762164cb89ce9c5c9cb924
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Sphere001
     400000: //RootNode
-    400002: Sphere001
-    2100000: dog_01___Default
-    2300000: Sphere001
-    3300000: Sphere001
-    4300000: Sphere001
-    2186277476908879412: ImportLogs
+    2100000: 01 - Default
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Building_01
   externalObjects: {}
   materials:
     importMaterials: 1

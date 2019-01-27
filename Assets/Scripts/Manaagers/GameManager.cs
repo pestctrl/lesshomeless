@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject BoxEnvironment;
     public float multiplier = 1;
     float timewait;
-    
+    public GameObject boxPrefab;
+    public Transform outEnviron;
+
     void Start()
     {
         daym.gmparent = this;
@@ -59,11 +61,15 @@ public class GameManager : MonoBehaviour
             ResetSpawnObjs[i].transform.localPosition = SpawnPoints[i].localPosition;
             ResetSpawnObjs[i].transform.localRotation = SpawnPoints[i].localRotation;
 
-            //if (ResetSpawnObjs[i].transform.tag == "Box")
-            //{
-            //    ResetSpawnObjs[i].transform.rotation = new Quaternion(-90, 0, -90, 0);
-            //}
-            
+            if (ResetSpawnObjs[i].transform.tag == "Box")
+            {
+                print("did dat");
+                Destroy(ResetSpawnObjs[i]);
+                GameObject box = Instantiate(boxPrefab, SpawnPoints[i].position, new Quaternion(-90,120,-212,0));
+                box.transform.SetParent(outEnviron);
+                
+            }
+
         }
     }
 

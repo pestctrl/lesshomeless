@@ -43,6 +43,12 @@ public class InventoryManager : MonoBehaviour
             foodVal--;
             waterVal--;
             dogFood--;
+            if (dogFood < 30)
+            {
+                //dog in trouble
+                yield return new WaitForSeconds(5);
+                GetComponent<SoundMixer>().PlayAudio();
+            }
         }
     }
 

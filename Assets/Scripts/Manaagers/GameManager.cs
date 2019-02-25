@@ -59,6 +59,11 @@ public class GameManager : MonoBehaviour
     public void GoToBox() {
         Debug.Log("We can look at the store, buy some cool stuffs, and then the next day will start");
         Debug.Log("You have $" + inven.money + "!!!");
+        foreach (var item in FindObjectsOfType<SomeInstance>())
+        {
+            print("destroy cars and people"  + GameObject.FindObjectsOfType<SomeInstance>());
+            Destroy(item);
+        }
         this.gameObject.SetActive(false);
         BoxEnvironment.SetActive(true);
 

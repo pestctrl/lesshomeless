@@ -19,6 +19,7 @@ TagManager:
   - Swordfish
   - Basket
   - Trash
+  - PeopleSpawn
   layers:
   - Default
   - TransparentFX

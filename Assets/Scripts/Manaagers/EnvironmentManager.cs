@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
-   // public GameObject[] CarSpawns = new GameObject[2];
-    public GameObject CarSpawn;
-    public GameObject PeopleSpawn;
+    public Transform[] CarSpawns = new Transform[2];
+    public Transform[] PeopleSpawns = new Transform[2];
+
     public GameObject[] CarTypes;
     public GameObject[] People;
     public bool spawnCars;
@@ -14,9 +14,16 @@ public class EnvironmentManager : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        StartCoroutine(BackAndFourthCycle(CarSpawn, CarTypes, 10, -1 * CarTypes[0].transform.up * 240, 2, 6));
-        
-        StartCoroutine(BackAndFourthCycle(PeopleSpawn, People, 10, -1 * CarTypes[0].transform.up * 120, 4, 7));
+       
+        foreach(var spawnPoint in CarSpawns)
+        {
+            StartCoroutine(BackAndFourthCycle(spawnPoint, CarTypes, 10, -1 * CarTypes[0].transform.up * 240, 2, 6));
+        }
+        foreach (var spawnPoint in PeopleSpawns)
+        {
+            StartCoroutine(BackAndFourthCycle(spawnPoint, People, 10, People[0].transform.forward * 120, 4, 7));
+        }
+
     }
 
     // Update is called once per frame
@@ -25,7 +32,7 @@ public class EnvironmentManager : MonoBehaviour
        
     }
 
-    IEnumerator BackAndFourthCycle(GameObject spawn, GameObject[] candidates, int timeDestroy, Vector3 thrust, int dlb, int dub)
+    IEnumerator BackAndFourthCycle(Transform spawn, GameObject[] candidates, int timeDestroy, Vector3 thrust, int dlb, int dub)
     {
             bool spawned = false;
             while (!spawned)
